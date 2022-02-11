@@ -1,0 +1,110 @@
+[
+    {
+        "id": "1",
+        "title": "Veg Biryani",
+        "url": "https://4.imimg.com/data4/JS/HP/MY-35740180/mutton-biryani-500x500.jpg",
+        "category": "Veg",
+        "price": 200,
+        "discount": "10%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "2",
+        "title": "NonVeg Starters",
+        "url": "https://blog.railrestro.com/wp-content/uploads/2020/07/Non-veg-starters-1.jpg",
+        "category": "NonVeg",
+        "price": 250,
+        "discount": "15%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "3",
+        "title": "Mutton Stew",
+        "url": "https://4.imimg.com/data4/XO/FT/MY-35740180/mutton-stew-500x500.jpg",
+        "category": "NonVeg",
+        "price": 299,
+        "discount": "20%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "4",
+        "title": "Veg Fried Rice",
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXh0M2lcFVEEZUY11wEv8Up-IftnGAsea5-Q&usqp=CAU",
+        "category": "Veg",
+        "price": 200,
+        "discount": "10%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "7",
+        "title": "Chicken Kurma",
+        "url": "https://4.imimg.com/data4/TH/PX/MY-35740180/chicken-qorma-500x500.jpg",
+        "category": "NonVeg",
+        "price": 300,
+        "discount": "20%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "10",
+        "title": "Gobhi Aloo",
+        "url": "https://www.geetakiduniya.com/wp-content/uploads/2021/02/aloo-gobi.jpg",
+        "category": "Veg",
+        "price": 150,
+        "discount": "20%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "11",
+        "title": "Chicken Stew",
+        "url": "https://4.imimg.com/data4/DV/RR/MY-35740180/chicken-biryani-500x500.jpg",
+        "category": "NonVeg",
+        "price": 299,
+        "discount": "15%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "12",
+        "title": "Paneer Kurchan",
+        "url": "https://c.ndtvimg.com/2020-07/1lm82rsg_paneer-tiffin_625x300_29_July_20.jpg",
+        "category": "Veg",
+        "price": 150,
+        "discount": "10%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "13",
+        "title": "Chicken Curry",
+        "url": "https://media.istockphoto.com/photos/indian-chicken-curry-picture-id471614507?k=20&m=471614507&s=612x612&w=0&h=snprycYKdTlsTn9vDNuFkWVPv-mwwRJoz2UidfhKvwQ=",
+        "category": "NonVeg",
+        "price": 200,
+        "discount": "12%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "14",
+        "title": "Masala Dosa",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/ab/53/22/saravana-pure-veg-south.jpg",
+        "category": "Veg",
+        "price": 100,
+        "discount": "20%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "15",
+        "title": "Malai Kofta",
+        "url": "https://www.thespruceeats.com/thmb/g_qSl37HLBa_w5aHWotMzxZJi44=/4494x3000/filters:no_upscale():max_bytes(150000):strip_icc()/malai-kofta-vege-balls-in-a-thick-sauce-1957964_hero-01-474bc099313944668d3b2c68b88549d5.jpg",
+        "category": "Veg",
+        "price": 150,
+        "discount": "15%OFF",
+        "quantity": 0
+    },
+    {
+        "id": "16",
+        "title": "Baked Samosa",
+        "url": "https://www.thespruceeats.com/thmb/_3Ui6lMP7GXiYK2o2GmOMgzsLnA=/566x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/quick-and-easy-baked-vegetarian-samosas-3377863-hero-01-2847c412661144d686bfa4d123232109.jpg",
+        "category": "Veg",
+        "price": 100,
+        "discount": "10%OFF",
+        "quantity": 0
+    }
+]
