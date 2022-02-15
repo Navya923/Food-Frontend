@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import Resturants from './components/Resturants';
 import Products from './components/Products';
-import AllProducts from './products.json';
+// import AllProducts from './products.json';
 import Cart from './components/Cart';
 import filterList from './components/filterList';
 
@@ -20,11 +20,11 @@ const App = () => {
   useEffect(() => {
     setProducts(filterList([], null));
     if (MountFlag) {
-      axios.post('http://localhost:8080/Cart/cart')
+      axios.get('http://localhost:8080/Product')
         .then((response) => {
           console.log(response);
-          setCart(response.data);
-          setMountFlag(false)
+          setProducts(response.data);
+          setMountFlag(true)
         }).catch((err) => {
           console.log(err);
         })
@@ -36,14 +36,14 @@ const App = () => {
 
   const setResturant = (resturant) => {
     console.log(resturant);
-    const resturants = [selectedResturants];
+  
     console.log(products);
     let newArray=[];
-    if(resturant=='AllProducts'){
-      newArray=AllProducts
+    if(resturant.name=='AllProducts'){
+      newArray=products
     }else{
-      newArray = AllProducts.filter((element) => {
-        if (element.restaurantName == resturant) {
+      newArray = products.filter((element) => {
+        if (element.restaurantId == resturant.id) {
           return element;
         }
       })
@@ -58,7 +58,7 @@ const App = () => {
   const searchProducts=(text)=>{
     // console.log('searchtext',text);
     let searchText=text.toLocaleLowerCase()
-    let filteredProducts=AllProducts.filter((product)=>{
+    let filteredProducts=Products.filter((product)=>{
       let productName=product.name.toLocaleLowerCase();
       let restaurantName=product.restaurantName.toLocaleLowerCase();
       if(productName.includes(searchText) || restaurantName.includes(searchText)){
