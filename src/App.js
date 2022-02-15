@@ -2,28 +2,25 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import Resturants from './components/Resturants';
-
 import Products from './components/Products';
 import AllProducts from './products.json';
 import Cart from './components/Cart';
 import filterList from './components/filterList';
-import Navbar from './components/Navbar';
-
-
 
 
 const App = () => {
 
   const [products, setProducts] = useState([]);
   const [selectedResturants, setSelectedResturants] = useState([]);
+
   const [cart, setCart] = useState([]);
   const [MountFlag, setMountFlag] = useState(true);
-  const [Search, SearchIconWrapper, StyledInputBase ] = useState([]);
+  const [Search, SearchIconWrapper, StyledInputBase] = useState([]);
 
   useEffect(() => {
     setProducts(filterList([], null));
     if (MountFlag) {
-      axios.get('http://localhost:8080/Cart/cart/id')
+      axios.post('http://localhost:8080/Cart/cart')
         .then((response) => {
           console.log(response);
           setCart(response.data);
@@ -33,31 +30,43 @@ const App = () => {
         })
     }
   }, [])
+  
+
+  
 
   const setResturant = (resturant) => {
+    console.log(resturant);
     const resturants = [selectedResturants];
-    let temp = '';
-    if (resturant == 'EMPIRE') {
-      temp = 'Empire';
-    }
-    if (resturant == 'ATRIA') {
-      temp = 'Atria';
-    }
-    if (resturant == 'A2B') {
-      temp = 'A2b';
-    }
-    if (resturant == 'CITRUS') {
-      temp = 'Citrus';
-    }
     console.log(products);
-    let newArray = AllProducts.filter((element) => {
-      if (element.resturant == temp) {
-        return element;
-      }
-    })
+    let newArray=[];
+    if(resturant=='AllProducts'){
+      newArray=AllProducts
+    }else{
+      newArray = AllProducts.filter((element) => {
+        if (element.restaurantName == resturant) {
+          return element;
+        }
+      })
+    }
+    
     console.log(newArray)
 
     setProducts(newArray);
+  }
+  
+
+  const searchProducts=(text)=>{
+    // console.log('searchtext',text);
+    let searchText=text.toLocaleLowerCase()
+    let filteredProducts=AllProducts.filter((product)=>{
+      let productName=product.name.toLocaleLowerCase();
+      let restaurantName=product.restaurantName.toLocaleLowerCase();
+      if(productName.includes(searchText) || restaurantName.includes(searchText)){
+        return product;
+      }  
+    });
+    // console.log(filteredProducts);
+    setProducts(filteredProducts);
   }
 
   const sortProducts = (method) => {
@@ -87,54 +96,118 @@ const App = () => {
     setCart(productList);
 
     console.log(item);
-    axios.post("http://localhost:8080/Product/product", [{
-      discount: item.discount,
-      price: item.price,
-      quantity: item.quantity,
-      title: item.title,
-      url: item.url
-    }]
+    axios.post("http://localhost:8080/Cart/cart", {
+      
+        "product": 
+            {
+                "id": item.id,
+                "quantity": item.quantity++,
+                "price": item.price,
+                "name": item.name,
+                "discount": item.discount,
+                "restaurantId": item.restaurantId,
+                "category": item.category,
+                "topPick": item.topPick,
+                "cart": item.cart,
+                "url": item.url
+            }
+        
+      }
 
     ).then((response) => {
       console.log(response);
     })
-      .catch((error) => {
+    .catch((error) => {
         console.log(error);
-      })
+    })
   }
 
   const changeQuantity = (item, e) => {
     const productList = [...cart];
+    console.log(item,e);
     const index = productList.indexOf(item);
     if (e === '+') {
       productList[index].quantity++;
+      //update quantity of item
+      axios.put('http://localhost:8080/Cart/cart',{
+        id:'',
+      })
+      .then((Response)=>{
+        console.log(Response);
+      }).catch((Err)=>{
+        console.log(Err);
+      })
     }
     else {
-      if (productList[index].quantity > 1) {
+      if (productList[index].quantity > 0) {
         productList[index].quantity--;
+        //Remove item from Database
+        axios.put('http://localhost:8080/Cart/cart',{
+          id:'',
+        })
+        .then((Response)=>{
+          console.log(Response);
+        }).catch((Err)=>{
+          console.log(Err);
+        })
       }
       else {
         productList.splice(index, 1);
+        //delete API
+        axios.delete('http://localhost:8080/Cart/cart',{
+          id:'',
+        })
+        .then((Response)=>{
+          console.log(Response);
+        }).catch((Err)=>{
+          console.log(Err);
+        })
       }
     }
     setCart(productList);
   }
 
   const handleClearProducts = () => {
-    console.log('clear', cart)
+    console.log('clear', cart);
+    let CartItems=[];
+    axios.get('http://localhost:8080/Cart/cart')
+    .then((response)=>{
+      console.log(response);
+      CartItems=response.data;
+    }).catch((err)=>{
+      console.log(err);
+    })
+    CartItems.map((element)=>{
+      axios.delete('http://localhost:8080/Cart/cart',{
+        id:element.id,
+      })
+      .then((Response)=>{
+        console.log(Response);
+      }).catch((Err)=>{
+        console.log(Err);
+      })
+    })
+    
     setCart([]);
   }
 
+  
+
   return (
     <div className="App">
-     <Resturants selectedResturants={selectedResturants} setResturant={setResturant} />
-      <Products products={products} sortProducts={sortProducts} addToCart={addToCart} />
+     <div class="header">
+ 
+ <center> <img src="https://image.freepik.com/free-vector/chinese-food-background-illustrated_52683-68274.jpg"/></center>
+</div>
+
+      <Resturants selectedResturants={selectedResturants} setResturant={setResturant} />
+      <center><Products searchProducts={searchProducts} products={products} sortProducts={sortProducts} addToCart={addToCart} /></center>
       <Cart handleClearProducts={handleClearProducts} products={cart} changeQuantity={changeQuantity} />
-      <Navbar selectedSearch={SearchIconWrapper} setSearch={StyledInputBase } />
-    
+
     </div>
-    );
-  
+  );
+
 }
+
 
 export default App;

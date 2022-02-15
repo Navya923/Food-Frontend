@@ -1,110 +1,378 @@
 [
     {
         "id": "1",
-        "title": "Veg Biryani",
+        "name": "Veg Biryani",
         "url": "https://4.imimg.com/data4/JS/HP/MY-35740180/mutton-biryani-500x500.jpg",
         "category": "Veg",
         "price": 200,
         "discount": "10%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Taj",
+        "topPick":true
     },
     {
         "id": "2",
-        "title": "NonVeg Starters",
+        "name": "NonVeg Starters",
         "url": "https://blog.railrestro.com/wp-content/uploads/2020/07/Non-veg-starters-1.jpg",
         "category": "NonVeg",
         "price": 250,
         "discount": "15%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Taj",
+        "topPick":false
     },
     {
         "id": "3",
-        "title": "Mutton Stew",
+        "name": "Mutton Stew",
         "url": "https://4.imimg.com/data4/XO/FT/MY-35740180/mutton-stew-500x500.jpg",
         "category": "NonVeg",
         "price": 299,
         "discount": "20%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Taj",
+        "topPick":true
     },
     {
         "id": "4",
-        "title": "Veg Fried Rice",
+        "name": "Veg Fried Rice",
         "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXh0M2lcFVEEZUY11wEv8Up-IftnGAsea5-Q&usqp=CAU",
         "category": "Veg",
         "price": 200,
         "discount": "10%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Taj",
+        "topPick":false
     },
     {
-        "id": "7",
-        "title": "Chicken Kurma",
-        "url": "https://4.imimg.com/data4/TH/PX/MY-35740180/chicken-qorma-500x500.jpg",
-        "category": "NonVeg",
+    "id": "5",
+    "name": "Gobhi Aloo",
+    "url": "https://www.geetakiduniya.com/wp-content/uploads/2021/02/aloo-gobi.jpg",
+    "category": "Veg",
+    "price": 100,
+    "discount": "10%OFF",
+    "quantity": 0,
+    "restaurantName":"Taj",
+    "topPick":true
+},
+{
+    "id": "6",
+    "name": "Paneer Kurchan",
+    "url": "https://c.ndtvimg.com/2020-07/1lm82rsg_paneer-tiffin_625x300_29_July_20.jpg",
+    "category": "Veg",
+    "price": 250,
+    "discount": "15%OFF",
+    "quantity": 0,
+    "restaurantName":"Taj",
+    "topPick":false
+},
+{
+    "id": "7",
+    "name": "Masala Dosa",
+    "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/ab/53/22/saravana-pure-veg-south.jpg",
+    "category": "Veg",
+    "price": 100,
+    "discount": "20%OFF",
+    "quantity": 0,
+    "restaurantName":"Taj",
+    "topPick":true
+},
+{
+    "id": "8",
+    "name": "Bhatura",
+    "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2010/06/bhatura-recipe-280x280.jpg",
+    "category": "Veg",
+    "price": 200,
+    "discount": "10%OFF",
+    "quantity": 0,
+    "restaurantName":"Taj",
+    "topPick":false
+},
+
+    {
+        "id": "9",
+        "name": "Milk Cake",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/14/baby_milk_cake_COMPRESSED.jpg?width=300",
+        "category": "Sweet",
         "price": 300,
         "discount": "20%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":true
     },
     {
         "id": "10",
-        "title": "Gobhi Aloo",
-        "url": "https://www.geetakiduniya.com/wp-content/uploads/2021/02/aloo-gobi.jpg",
-        "category": "Veg",
+        "name": "Chocolate Burfi",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/14/chocolate_burfi_COMPRESSED.jpg?width=300",
+        "category": "Sweet",
         "price": 150,
         "discount": "20%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":false
     },
     {
         "id": "11",
-        "title": "Chicken Stew",
-        "url": "https://4.imimg.com/data4/DV/RR/MY-35740180/chicken-biryani-500x500.jpg",
-        "category": "NonVeg",
-        "price": 299,
+        "name": "Malai Peda",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/23/Malai_Peda_COMPRESSED.jpg?width=300",
+        "category": "Sweet",
+        "price": 199,
         "discount": "15%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":true
     },
     {
         "id": "12",
-        "title": "Paneer Kurchan",
-        "url": "https://c.ndtvimg.com/2020-07/1lm82rsg_paneer-tiffin_625x300_29_July_20.jpg",
-        "category": "Veg",
+        "name": "Shon Halwa",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/14/soan_halwa_COMPRESSED.jpg?width=300",
+        "category": "Sweet",
         "price": 150,
         "discount": "10%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":false
     },
     {
         "id": "13",
-        "title": "Chicken Curry",
+        "name": "Spl Laddu",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/14/spl_laddu_COMPRESSED.jpg?width=300",
+        "category": "Sweet",
+        "price": 200,
+        "discount": "12%OFF",
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":true
+    },
+    {
+        "id": "14",
+        "name": "Ajmeer Cake",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/09/30/AJMEER_CAKE_COMPRESSED.png?width=300",
+        "category": "Sweet",
+        "price": 150,
+        "discount": "20%OFF",
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":false
+    },
+    {
+        "id": "15",
+        "name": "Dry Fruit Halwa",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/26/Dry_Fruit_Halwa_COMPRESSED.jpg?width=300",
+        "category": "NonVeg",
+        "price": 299,
+        "discount": "15%OFF",
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":true
+    },
+    {
+        "id": "16",
+        "name": "Chocolate Chip Cookies",
+        "url": "https://cdn.urbanpiper.com/media/bizmedia/l/2021/07/23/Chocolate_Chip_Cookie_COMPRESSED_COMPRESSED.jpg?width=300",
+        "category": "Sweet",
+        "price": 150,
+        "discount": "10%OFF",
+        "quantity": 0,
+        "restaurantName":"A2B",
+        "topPick":false
+    },
+    {
+        "id": "17",
+        "name": "Chicken Curry",
         "url": "https://media.istockphoto.com/photos/indian-chicken-curry-picture-id471614507?k=20&m=471614507&s=612x612&w=0&h=snprycYKdTlsTn9vDNuFkWVPv-mwwRJoz2UidfhKvwQ=",
         "category": "NonVeg",
         "price": 200,
         "discount": "12%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":true
     },
     {
-        "id": "14",
-        "title": "Masala Dosa",
-        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/ab/53/22/saravana-pure-veg-south.jpg",
+        "id": "18",
+        "name": "Tomato Soup",
+        "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/tomato-soup-recipe-280x280.jpg",
         "category": "Veg",
         "price": 100,
         "discount": "20%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":false
     },
     {
-        "id": "15",
-        "title": "Malai Kofta",
-        "url": "https://www.thespruceeats.com/thmb/g_qSl37HLBa_w5aHWotMzxZJi44=/4494x3000/filters:no_upscale():max_bytes(150000):strip_icc()/malai-kofta-vege-balls-in-a-thick-sauce-1957964_hero-01-474bc099313944668d3b2c68b88549d5.jpg",
+        "id": "19",
+        "name": "Hara Bhara Kabab",
+        "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2013/01/hara-bhara-kabab-2-280x280.jpg",
+        "category": "NonVeg",
+        "price": 150,
+        "discount": "15%OFF",
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":true
+    },
+    {
+        "id": "20",
+        "name": "Khichidi",
+        "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/02/khichdi-recipe-1-280x280.jpg",
+        "category": "NonVeg",
+        "price": 100,
+        "discount": "10%OFF",
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":false
+    },
+    {
+        "id": "21",
+        "name": "Chicken Stew",
+        "url": "https://4.imimg.com/data4/DV/RR/MY-35740180/chicken-biryani-500x500.jpg",
+        "category": "NonVeg",
+        "price": 200,
+        "discount": "12%OFF",
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":true
+    },
+    {
+        "id": "22",
+        "name": "Dahi Vada",
+        "url": "https://www.vegrecipesofindia.com/wp-content/uploads/2021/01/dahi-vada-280x280.jpg",
+        "category": "Veg",
+        "price": 100,
+        "discount": "20%OFF",
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":false
+    },
+    {
+        "id": "23",
+        "name": "Gobhi Rice",
+        "url": "https://4.imimg.com/data4/TH/PX/MY-35740180/chicken-qorma-500x500.jpg",
         "category": "Veg",
         "price": 150,
         "discount": "15%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":true
     },
     {
-        "id": "16",
-        "title": "Baked Samosa",
-        "url": "https://www.thespruceeats.com/thmb/_3Ui6lMP7GXiYK2o2GmOMgzsLnA=/566x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/quick-and-easy-baked-vegetarian-samosas-3377863-hero-01-2847c412661144d686bfa4d123232109.jpg",
-        "category": "Veg",
+        "id": "24",
+        "name": "Biryani",
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXh0M2lcFVEEZUY11wEv8Up-IftnGAsea5-Q&usqp=CAU",
+        "category": "NonVeg",
         "price": 100,
         "discount": "10%OFF",
-        "quantity": 0
+        "quantity": 0,
+        "restaurantName":"Empire",
+        "topPick":false
+    },
+    {
+        "id": "25",
+        "name": "Bacon Egg and Cheese Biscuit",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Bacon-Egg-Cheese-Biscuit-Regular-Size-Biscuit-1:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 150,
+        "discount": "10%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":false
+    },
+    {
+        "id": "26",
+        "name": "Fruit and Mapple Oatmeal",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Fruit-Maple-Oatmeal-1:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 200,
+        "discount": "12%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":true
+    },
+    {
+        "id": "27",
+        "name": "Cheese Burger",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Cheeseburger-1:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 100,
+        "discount": "20%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":false
+    },
+    {
+        "id": "28",
+        "name": "Hamburger",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Hamburger:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 150,
+        "discount": "15%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":true
+    },
+    {
+        "id": "29",
+        "name": "Crispy Chicken Sandwich",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-spicy-crispy-chicken-sandwich:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 100,
+        "discount": "10%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":false
+    },
+    {
+        "id": "30",
+        "name": "Chicken McNuggets",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Chicken-McNuggets-4pc-1:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 200,
+        "discount": "12%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":true
+    },
+    {
+        "id": "31",
+        "name": "Hamburger Happy Meal",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/h-mcdonalds-Hamburger:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 100,
+        "discount": "20%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":false
+    },
+    {
+        "id": "32",
+        "name": "Cheeseburger Combo Meal",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/h-mcdonalds-2-Cheeseburger-Extra-Value-Meals:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 150,
+        "discount": "15%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":true
+    },
+    {
+        "id": "33",
+        "name": "Big Mac Combo Meal",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/h-mcdonalds-Big-Mac-Extra-Value-Meals:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 100,
+        "discount": "10%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":false
+    },
+    {
+        "id": "34",
+        "name": "French Fries",
+        "url": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-fries-small:1-4-product-tile-desktop",
+        "category": "Burger",
+        "price": 100,
+        "discount": "10%OFF",
+        "quantity": 0,
+        "restaurantName":"McDonalds",
+        "topPick":false
     }
+
 ]

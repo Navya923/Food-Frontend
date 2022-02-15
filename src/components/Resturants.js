@@ -3,10 +3,10 @@ import Button from '@mui/material/Button';
 
 const Resturants = ({selectedResturants, setResturant}) =>  {
 console.log(selectedResturants)
-    const resturants = ['EMPIRE', 'ATRIA', 'A2B', 'CITRUS'];
+        const resturants = ['AllProducts','Empire', 'A2B', 'Taj', 'McDonalds'];
     return (
         <div className="resturants">
-            <h3>RESTURANTS</h3>
+            <center><h1>TOP RESTURANTS</h1></center>
             <div className="resturant-list">
                 {
                     resturants.map((resturant, index) => {

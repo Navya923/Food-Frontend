@@ -53,7 +53,7 @@ const Cart = ({ products, changeQuantity, handleClearProducts }) => {
                 <div className="sidebar-content">
                     <div className="toggle-btn" onClick={toggleButton}>
                         <div>{products.length}</div>
-                        <AddShoppingCartIcon sx={{ color: pink[500] }} />
+                        <AddShoppingCartIcon sx={{ maxWidth:200, color: pink[500] }} />
                     </div>
                     <div className="cart-content">
                         <h3>

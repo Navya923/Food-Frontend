@@ -7,7 +7,7 @@ const CartItem = ({product, changeQuantity}) => {
             <img src={product.url} alt="cart-item" className="cart-item-image" />
             <div>
                 <div>
-                    <p className="item-title">{product.title}</p>
+                    <p className="item-name">{product.name}</p>
                     <span className="cart-item-price">Rs {product.price}</span>
                 </div>
                 <div>
