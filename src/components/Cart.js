@@ -15,15 +15,14 @@ const Cart = ({ products, changeQuantity, handleClearProducts }) => {
     const toggleButton = () => {
         toggleClass(!classActive);
     }
-    console.log(products);
-    
+
     useEffect(() => {
         let total = 0;
         for (var i = 0; i < products.length; i++) {
-            let discountNumber = Number(products[i].discount.slice(0, 2));
-            let discountPrice = (products[i].price / 100) * discountNumber;
+            let discountNumber = Number(products[i].product.discount.slice(0, 2));
+            let discountPrice = (products[i].product.price / 100) * discountNumber;
 
-            total += (products[i].price - discountPrice) * products[i].quantity;
+            total += (products[i].product.price - discountPrice) * products[i].quantity;
         }
         setSum(total);
     }, [products])
@@ -34,7 +33,7 @@ const Cart = ({ products, changeQuantity, handleClearProducts }) => {
         handleClearProducts();
 
     }
-
+console.log(products);
 
     return (
         <Fragment>
@@ -69,11 +68,11 @@ const Cart = ({ products, changeQuantity, handleClearProducts }) => {
                                         <p>There are no items in Cart, Please add items to checkout!!!</p>
                                     </div>
                                     :
-                                    products.map(product => {
+                                    products.map(item => {
                                         return (
                                             <CartItem
-                                                key={product.id}
-                                                product={product}
+                                                key={item.id}
+                                                cart={item}
                                                 changeQuantity={changeQuantity}
                                             />
                                         )

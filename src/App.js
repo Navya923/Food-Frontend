@@ -20,17 +20,22 @@ const App = () => {
   useEffect(() => {
     setProducts(filterList([], null));
     if (MountFlag) {
-      axios.get('http://localhost:8080/Product')
-        .then((response) => {
-          console.log(response);
-          setProducts(response.data);
-          setAllProducts(response.data);
-          setMountFlag(true)
-        }).catch((err) => {
-          console.log(err);
-        })
+      fetchProducts();
+      fetchCart();
     }
   }, [])
+
+  const fetchProducts = () => {
+    axios.get('http://localhost:8080/Product')
+      .then((response) => {
+        console.log(response);
+        setProducts(response.data);
+        setAllProducts(response.data);
+        setMountFlag(true)
+      }).catch((err) => {
+        console.log(err);
+      });
+  }
 
   const setResturant = (resturant) => {
     let newArray = [];
@@ -52,8 +57,8 @@ const App = () => {
     let searchText = text.toLocaleLowerCase()
     let filteredProducts = allProducts.filter((product) => {
       let productName = product.name.toLocaleLowerCase();
-      let restaurantName = product.restaurantName.toLocaleLowerCase();
-      if (productName.includes(searchText) || restaurantName.includes(searchText)) {
+      
+      if (productName.includes(searchText) ) {
         return product;
       }
     });
@@ -78,6 +83,15 @@ const App = () => {
     setProducts(array);
   }
 
+  const fetchCart = () => {
+    axios.get("http://localhost:8080/Cart/cart")
+      .then((response) => {
+        console.log("fetching cart", response);
+        setCart(response.data);
+      })
+      .catch((err) => { console.log(err) })
+  }
+
   const addToCart = (item) => {
     const productList = [...cart];
     if (!productList.includes(item)) {
@@ -89,7 +103,6 @@ const App = () => {
     console.log(item);
     axios.post("http://localhost:8080/Cart/cart", {
       "product":
-
       {
         "id": item.id,
         "quantity": item.quantity,
@@ -102,8 +115,7 @@ const App = () => {
         "cart": item.cart,
         "url": item.url
       },
-      "quantity":1
-
+      "quantity": 1
     }
 
     ).then((response) => {
@@ -187,7 +199,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <div class="header">
+      <div className="header">
 
         <center> <img src="https://image.freepik.com/free-vector/chinese-food-background-illustrated_52683-68274.jpg" /></center>
       </div>
